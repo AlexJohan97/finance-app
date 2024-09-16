@@ -13,7 +13,6 @@ export default function Button(props: any) {
     sm: "text-sm px-3 py-1.5",
     lg: "text-lg px-4 py-2",
   };
-  console.log("hola", props);
   return (
     <button
       {...props}
@@ -21,7 +20,7 @@ export default function Button(props: any) {
         props?.variant ? variants[props.variant] : variants.default
       } ${props?.size ? sizes[props.size] : sizes.default}`}
     >
-      Submit
+      {props.children}
     </button>
   );
 }
