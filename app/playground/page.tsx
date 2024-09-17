@@ -4,6 +4,7 @@ import Label from "@/components/label";
 import PageHeader from "@/components/page-header";
 import Select from "@/components/select";
 import Separator from "@/components/separator";
+import Skeleton from "@/components/skeleton";
 import TransactionItem from "@/components/transaction";
 import TransactionSummaryItem from "@/components/transaction-summary-item";
 import Trend from "@/components/trend";
@@ -119,6 +120,23 @@ export default function Page() {
             <Label className="ml-2" htmlFor="terms">
               Accept tems
             </Label>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 className="mb-4 text-lg font-mono">Loading Skeleton</h2>
+        <Separator />
+        <div className="space-y-8">
+          <div className="flex space-x-4">
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+          </div>
+          <div className="space-y-4">
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
           </div>
         </div>
       </div>
