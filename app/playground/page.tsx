@@ -9,6 +9,9 @@ import TransactionItem from "@/components/transaction";
 import TransactionSummaryItem from "@/components/transaction-summary-item";
 import Trend from "@/components/trend";
 
+export const metadata = {
+  title: "Playground",
+};
 export default function Page() {
   return (
     <main className="space-y-8 mb-3">
