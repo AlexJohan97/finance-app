@@ -1,4 +1,6 @@
-export default function Input(props: any) {
+import { forwardRef } from "react";
+
+export default forwardRef(function Input(props: any, ref) {
   const styles: { [key: string]: string } = {
     checkbox:
       "rounded border-gray-300 text-gray-700 bg-white dark:bg-gray-950 dark:text-gray-500 shadow-sm",
@@ -7,6 +9,10 @@ export default function Input(props: any) {
   };
 
   return (
-    <input {...props} className={styles[props.type] ?? styles["default"]} />
+    <input
+      {...props}
+      ref={ref}
+      className={styles[props.type] ?? styles["default"]}
+    />
   );
-}
+});
